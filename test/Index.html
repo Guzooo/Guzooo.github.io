@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Testy automatyczne</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Testy automatyczne</h1> 
+        <p id="fail_info"></p>
+        <p id="pass_info"></p>
+        <script type="text/javascript" src="Test.js"></script>
+    </body>
+    <script>
+        setFailView();
+        setPassView();
+
+        function setFailView(){
+            let num = document.getElementsByClassName("fail").length;
+            writeFailInfo(num + " testów zakończonych niepowodzeniem");
+        }
+
+        function setPassView(){
+            let num = document.getElementsByClassName("pass").length;
+            writePassInfo(num + " testów ukończonych pomyślnie");
+        }
+
+        function writeFailInfo(text){
+            document.getElementById("fail_info").innerHTML = text;
+        }
+
+        function writePassInfo(text){
+            document.getElementById("pass_info").innerHTML = text;
+        }
+    </script>
+</html>

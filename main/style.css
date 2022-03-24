@@ -1,0 +1,76 @@
+.noUi-connect {
+     background: #343a40 !important;
+     border: none;
+}
+
+.noUi-horizontal .noUi-handle {
+     border-radius: 50%;
+     width: 20px !important;
+     height: 20px !important;
+     border: 1px solid #343a40;
+     outline: none;
+     right: -10px !important;
+}
+
+.noUi-target {
+     border-radius: 0 !important;
+     height: 10px !important;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+     content: none !important;
+}
+
+.range-0,
+.range-1 {
+     width: 60px;
+}
+
+.form-select {
+     margin: 0 auto 0 auto;
+}
+
+.form-check-input:checked {
+     background-color: #343a40 !important;
+     border-color: #42464b !important;
+}
+
+.form-check-input {
+     box-shadow: none !important;
+     outline: none !important;
+}
+
+.form-check-input:focus {
+     border-color: #343a40 !important;
+}
+
+.form-check .form-check-input {
+     float: none !important;
+     margin-left: -1.5em;
+}
+
+#setDistanceXMax,
+#setDistanceYMax,
+#setSpaceMax,
+#setSpaceMin,
+#setDistanceXMin,
+#setDistanceYMin,
+#setSpineSize,
+#setSpineCount {
+     width: 60px;
+     border: none;
+     border-bottom: 1px solid #b6b6b6;
+}
+
+svg{
+     margin-left: 5px;
+}
+
+#spinner{
+     visibility: hidden;
+}
+
+.giraffeTypes button{
+     font-size: 15px;
+}

@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <title>Generator Skór Żyraf</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="noUiSlider-14.6.3/distribute/nouislider.css" rel="stylesheet">
+    <script src="noUiSlider-14.6.3/distribute/nouislider.js"></script>
+    <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="col-xl-6 text-center">
+                <h3 id="giraffeName" class="mt-4 title"></h3>
+                <p id="giraffeDescription" class="description"></p>
+                <div class="canvas-output mt-5">
+                    <canvas id="canvas" width="600px" height="600px"></canvas>
+                    <div class="d-flex justify-content-center">
+                        <div class="bd-highlight">
+                            <button onClick="generateSkin()" class="left-buttons btn btn-outline-dark rounded-0 mt-4"
+                                type="button">Generuj
+                                <div class="spinner-border spinner-border-sm" role="status" id="spinner">
+                                    <span class="sr-only"></span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-6 text-center giraffetypes">
+                <h4 class="mt-4">GENERUJ SKÓRĘ ISTNIEJĄCEGO GATUNKU ŻYRAFY</h4>
+                <div class="mt-3">
+                    <button onclick="clickGiraffe1()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        SIATKOWANA</button>
+                    <button onclick="clickGiraffe2()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        ZACHODNIOAFRKAŃSKA</button>
+                    <button onclick="clickGiraffe3()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        NUMBIJSKA</button>
+                    <button onclick="clickGiraffe4()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        KORDOFAŃSKA</button>
+                    <button onclick="clickGiraffe5()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        ANGOLSKA</button>
+                    <button onclick="clickGiraffe6()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        POŁUDNIOWOAFRYKAŃSKA</button>
+                    <button onclick="clickGiraffe7()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        ROTSZYLDA</button>
+                    <button onclick="clickGiraffe8()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        THORNICROFTA</button>
+                    <button onclick="clickGiraffe9()" type="button"
+                        class="left-buttons btn btn-outline-dark rounded-0 p-1 mt-2">ŻYRAFA
+                        MASAJSKA</button>
+                </div>
+                <div class="border border-dark shadow-sm px-5 pt-3 pb-3 mx-5 mt-3 bg-white">
+                    <div class="mb-1 fw-bold">Wielkość łat</div>
+                    <div class="row">
+                        <div class="form-check text-center">
+                            <input id="separationAxis" class="form-check-input color-dark" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Rozdzielenie osi
+                            </label>
+                        </div>
+                        <div id="osXContainer" class="col-12">
+                            <div class="style-2 wrapper">
+                                <div class="fw-bold" id="osX">Szerokość
+                                </div>
+                                <div class="spacing-x"></div>
+                                <div class="range-2 d-inline">
+                                    <div id="distanceXSlider"></div>
+                                </div>
+                                <input id="setDistanceXMin" type="number" min="150" max="400" step="1"> -
+                                <div class="range-3 d-inline">
+                                    <input id="setDistanceXMax" type="number" min="150" max="400" step="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="osY" class="col-6">
+                            <div class="style-2 wrapper">
+                                <div class="fw-bold">Wysokość</div>
+                                <div class="spacing-y"></div>
+                                <div class="range-4 d-inline">
+                                    <div id="distanceYSlider"></div>
+                                </div>
+                                <input id="setDistanceYMin" type="number" min="150" max="400" step="1"> -
+                                <div class="range-5 d-inline">
+                                    <input id="setDistanceYMax" type="number" min="150" max="400" step="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-1 mt-5 fw-bold">Odległość między łatami</div>
+                        <div class="style-2 wrapper pl-r">
+                            <div class="distance"></div>
+                            <div class="range-0 d-inline">
+                                <div id="spaceSlider"></div>
+                            </div>
+                            <input id="setSpaceMin" type="number" min="5" max="50" step="1"> -
+                            <div class="range-1 d-inline">
+                                <input id="setSpaceMax" type="number" min="5" max="50" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-1 mt-5 fw-bold">
+                        <div data-toggle="tooltip" data-placement="top"
+                            title="Prawdopodobieństwo wystąpienia kolca na każdym boku łat"> Ilość kolców
+                            <button type="button" class="btn btn-white" data-toggle="tooltip" data-placement="top"
+                                disabled>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-question-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                </svg></button></div>
+                    </div>
+                    <div class="style-1 wrapper pl-r">
+                        <div class="spikes"></div>
+                        <div class="mt-2 range-6">
+                            <div id="spineCountSlider"></div>
+                            <input id="setSpineCount" type="number" min="0.01" max="6" step="0.01">
+                        </div>
+                    </div>
+                    <div class="mb-1 mt-5 fw-bold">Wielkość kolców</div>
+                    <div class="style-1 wrapper pl-r">
+                        <div class="spikes"></div>
+                        <div class="range-6">
+                            <div id="spineSizeSlider"></div>
+                            <input id="setSpineSize" type="number" min="1" max="6" step="1">
+                        </div>
+                    </div>
+                    <div class="mb-1 mt-5 fw-bold">Kolorystyka skóry</div>
+                    <select id="skinColor" class="form-select shadow-none w-50 rounded-0">
+                        <option value="1">Żyrafa siatkowana</option>
+                        <option value="2">Żyrafa zachodnioafrykańska</option>
+                        <option value="3">Żyrafa numbijska</option>
+                        <option value="4">Żyrafa kordofańska</option>
+                        <option value="5">Żyrafa angolska</option>
+                        <option value="6">Żyrafa południowoafrykańska</option>
+                        <option value="7">Żyrafa rotszylda</option>
+                        <option value="8">Żyrafa thornicrofta</option>
+                        <option value="9">Żyrafa masajska</option>
+                    </select>
+                    <div class="mb-1 mt-5 fw-bold">Kolor środka łaty</div>
+                    <div class="row">
+                        <div class="col-12 px-5 mb-5">
+                            <div id="brightnessSlider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src='DimensionConstants.js'></script>
+<script type='text/javascript' src='PointUtils.js'></script>
+<script type='text/javascript' src='DrawUtils.js'></script>
+<script type='text/javascript' src='MathUtils.js'></script>
+<script type='text/javascript' src='Point.js'></script>
+<script type='text/javascript' src='Voronoi/Straight.js'></script>
+<script type='text/javascript' src='Voronoi/StraightVertical.js'></script>
+<script type='text/javascript' src='Voronoi/VoronoiCell.js'></script>
+<script type='text/javascript' src='Voronoi/VoronoiDiagram.js'></script>
+<script type='text/javascript' src='Poisson/PoissonPoint.js'></script>
+<script type='text/javascript' src='Poisson/PoissonProces.js'></script>
+<script type='text/javascript' src='Noise/NoisePoint.js'></script>
+<script type='text/javascript' src='Noise/NoiseGenerator.js'></script>
+<script type='text/javascript' src='Diffusion.js'></script>
+<script type='text/javascript' src='SpikesCreator.js'></script>
+<script type="text/javascript" src="Index.js"></script>
+
+</html>
