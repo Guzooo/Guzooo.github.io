@@ -1,0 +1,26 @@
+:root {
+    /* Color Resources (to use) */
+    --color-primary: var(--black-g);
+    --color-primary-dark: var(--dark-dark);
+    --color-primary-translucent: var(--dark-translucent);
+    --color-secondary: var(--white-g);
+    --color-secondary-dark: var(--light-dark);
+    --color-accent: var(--first-g);
+
+    /* Color Guzooo */
+    --black-g: #1f1f1f;
+	--white-g: #f2f2f2;
+
+    --first-g: #1d9a48;
+    --second-g: #d8a12f;
+    --third-g: #de4828;
+
+    /* Color Base */
+    --light: #FFFFFF;
+    --light-dark: #c9c9c9;
+    --light-translucent: #E6FFFFFF;
+
+    --dark: #363636;
+    --dark-dark: #6c6c6c;
+    --dark-translucent: #E6363636;
+}

@@ -1,0 +1,51 @@
+body{
+    font-family: Rubik;
+    margin: var(--margin-standard);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+/*App presentation stuff*/
+.logo{
+    display: block;
+    height: var(--lenght-logo);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app_logo{
+    display: inline-block;
+}
+
+.app_des{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: inline-block;
+    -ms-transform: translateY(-0%);
+    transform: translateY(-0%);
+}
+
+#app_list{
+    text-align: center;
+    margin-top: var(--margin-standard);
+    margin-bottom: var(--margin-standard);
+}
+
+/*Views staff*/
+.button{
+    color: var(--first-g);
+    font-size: 20px;
+}
+
+.button:active{
+    color: var(--second-g);
+}
+
+.button:visited{
+    color: var(--third-g);
+}
+
+/*Text Stuff*/
+.description{
+    font-size: 80%;
+}
