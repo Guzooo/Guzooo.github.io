@@ -1,0 +1,17 @@
+.app_logo{
+    display: inline-block;
+}
+
+.app_des{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: inline-block;
+    -ms-transform: translateY(-0%);
+    transform: translateY(-0%);
+}
+
+#app_list{
+    text-align: center;
+    margin-top: var(--margin-standard);
+    margin-bottom: var(--margin-standard);
+}
