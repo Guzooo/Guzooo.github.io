@@ -28,3 +28,16 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+.ripple-for-rounded-images {
+    scale: 80.5%;
+    transition: scale var(--animation-time);
+}
+
+.ripple-above-button-image {
+    z-index: 0 !important;
+}
+
+.with-shadow-for-rounded-images {
+    border-radius:100px;
+}

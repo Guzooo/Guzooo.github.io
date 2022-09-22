@@ -21,20 +21,32 @@
 		<header class="mdc-top-app-bar mdc-top-app-bar--short">
 			<div class="mdc-top-app-bar__row">
 				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
-					<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Bookmark this page">bookmark</button>
+					<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="openGooglePlay()">
+						<div class="ripple-above-button-image mdc-icon-button__ripple"></div>
+						shop
+					</button>
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" style="visibility: hidden"></button>
 				</section>
 				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-					<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" id="logo-on-app-bar">
-						<img src="values/images/logo g.png"/>
+					<button class="mdc-icon-button" id="logo-on-app-bar" onclick="goToHomePage()">
+						<div class="mdc-icon-button__ripple ripple ripple-above-button-image ripple-for-rounded-images"></div>
+						<img class="elevation-demo-surface mdc-elevation--z8 with-shadow-for-rounded-images" src="values/images/logo_g.png"/>
 					</button>
 				</section>
-			  <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-				<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Bookmark this page">bookmark</button>
-			  </section>
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openMessenger()">
+						<div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+						<img src="values/images/ic_messenger.png"/>
+					</button>
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openFacebook()" aria-label="Bookmark this page">
+						<div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+						<img src="values/images/ic_facebook.png"/>
+					</button>
+				</section>
 			</div>
 		</header>
 		<main class="mdc-top-app-bar--short-fixed-adjust">
-			<div id="behaind_app_bar"></div>
+			<div id="below_app_bar"></div>
 			<div id="app_list">
 				<img class="logo app_logo" src="values/images/logo organizer ucznia.png"/>
 				<div class="app_des">
@@ -53,9 +65,6 @@
 			</div>
 			<br>
 			<h3>🛠 Strona w budowie 🛠</h3>
-			<h4><a class="button" href="https://www.facebook.com/GuzoooApps">Fanpage - Facebook</a></h4>
-			<h4><a class="button" href="https://www.messenger.com/t/GuzoooApps">Napisz do mnie - Messenger</a></h4>
-			<h4><a class="button" href="https://play.google.com/store/apps/dev?id=6989903521291385498">Strona Programisty w Google Play</a></h4>
 			<p style="font-size: 10px; text-align: center;">
 				Google Play i logo Google Play są znakami towarowymi firmy Google LLC.
 			</p>
@@ -69,12 +78,19 @@
 			<p>papapapappa</p>
 			<p>papapapappa</p>
 			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
+			<p>papapapappa</p>
 		</main>
-		
-			
-		<script>
-			const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-			const appBar =  new mdc.topAppBar.MDCTopAppBar(topAppBarElement);
-		</script>
 	</body>
+	<script src="main.js"></script>
 </html>

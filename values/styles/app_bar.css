@@ -1,4 +1,12 @@
-#logo-on-app-bar{
+.mdc-top-app-bar {  /* app bar */
+    background-color: var(--color-primary);
+}
+
+.mdc-top-app-bar div section:nth-child(2){    /* center section */
+    z-index: 2;
+}
+
+#logo-on-app-bar{   /* logo */
     width: auto;
     height: auto;
     margin: auto;
@@ -6,27 +14,53 @@
     transition: margin var(--animation-time);
 }
 
-#logo-on-app-bar img{
+#logo-on-app-bar img{   /* img logo */
     width: var(--lenght-logo-on-app-bar);
     height: var(--lenght-logo-on-app-bar);
-    transition: width var(--animation-time) cubic-bezier(0.45, 0.05, 0.55, 0.95), height var(--animation-time) cubic-bezier(0.45, 0.05, 0.55, 0.95)
+    transition: width var(--animation-time) cubic-bezier(0.45, 0.05, 0.55, 0.95), height var(--animation-time) cubic-bezier(0.45, 0.05, 0.55, 0.95), box-shadow var(--animation-time);
 }
 
-.mdc-top-app-bar--short-collapsed div section #logo-on-app-bar{
-    margin-top: 0;
-}
-
-.mdc-top-app-bar--short-collapsed div section #logo-on-app-bar img{
-    width: var(--lenght-img-on-app-bar);
-    height: var(--lenght-img-on-app-bar);
-}
-
-.mdc-top-app-bar--short-collapsed div section:first-child {
-    opacity: 0;
-    width: 0px;
+.mdc-top-app-bar__action-item{  /* all icons */
+    color: var(--color-secondary) !important;
     transition: opacity var(--animation-time);
 }
 
-#behaind_app_bar{
+.mdc-top-app-bar__action-item img {  /* all img icons */
+    filter: var(--color-secondary-filter);
+}
+
+.mdc-top-app-bar--short-collapsed div section #logo-on-app-bar{ /* logo when app bar is collapsed */
+    margin-top: 0;
+}
+
+.mdc-top-app-bar--short-collapsed div section #logo-on-app-bar img{ /* img of logo when app bar is collapsed */
+    width: var(--lenght-img-on-app-bar);
+    height: var(--lenght-img-on-app-bar);
+    box-shadow: none;
+}
+
+.mdc-top-app-bar--short-collapsed div section #logo-on-app-bar .ripple-for-rounded-images { /* ripple of logo when app bar is collapsed */
+    scale: 100%;
+}
+
+.mdc-top-app-bar--short-collapsed div section:first-child { /* left section when app bar is collapsed */
+    width: 0;
+}
+
+.mdc-top-app-bar--short-collapsed div section:first-child button {  /* left icons when app bar is collapsed */
+    opacity: 0;
+    transition: opacity var(--animation-time);
+}
+
+.mdc-top-app-bar--short-collapsed div section:last-child button {   /* right icons when app bar is collapsed */
+    opacity: 0;
+    transition: opacity var(--animation-time);
+}
+
+.mdc-top-app-bar--short-collapsed div section:last-child button:last-child {    /* right last icon when app bar is collapsed */
+   opacity: 1;
+}
+
+#below_app_bar{   /* first view below app bar */
     height: calc(var(--lenght-logo-on-app-bar)/2);
 }
