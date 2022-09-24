@@ -18,7 +18,7 @@ function openFacebook(){
 
 function goToHomePage(){
     switch (location.href) {
-        case "http://guzooo.github.io":
+        case "https://guzooo.github.io":
         case "http://127.0.0.1/Guzooo/":
             scrollTo({top: 0, behavior: 'smooth'});
             break;
@@ -47,7 +47,7 @@ function disableCopyImageByDragg(){
 
 function centerAppsWhenHaveSpace(){
     switch (location.href){
-        case "http://guzooo.github.io":
+        case "https://guzooo.github.io":
         case "http://127.0.0.1/Guzooo/":
             var appBarBelow = document.getElementById("below_app_bar");
             var footer = document.getElementById("footer");
