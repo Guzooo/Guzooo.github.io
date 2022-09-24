@@ -2,37 +2,141 @@
 	<head>
 		<title>Guzooo</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="values/images/fav.png" type="image/png">
+		<meta name="theme-color" content="#1f1f1f">
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
 		<link rel="stylesheet" href="values/styles/base.css">
+		<link rel="stylesheet" href="values/styles/app_bar.css">
 		<link rel="stylesheet" href="values/styles/dimmensions.css">
 		<link rel="stylesheet" href="values/styles/colors.css">
+		<link rel="stylesheet" href="values/styles/text.css">
+		<link rel="stylesheet" href="values/styles/view.css">
+		<link rel="stylesheet" href="values/styles/apps_info.css">
 	</head>
-	<body>
-		<img class="logo" src="values/images/logo g.png"/>
-		<div id="app_list">
-			<img class="logo app_logo" src="values/images/logo organizer ucznia.png"/>
-			<div class="app_des">
-				<h2>Organizer Ucznia</h2>
-				Zadbaj o rok szkolny, notuj zadania, wpisuj oceny, a aplikacja zajmie się resztą.<br><br>
-				<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.DziennikUcznia&utm_source=GSite&utm_campaign=HomePage'><img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/></a>
+	<body onload="onScroll()">
+		<header class="mdc-top-app-bar mdc-top-app-bar--short">
+			<div class="mdc-top-app-bar__row">
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
+					<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="openGooglePlay()">
+						<div class="ripple-above-button-image mdc-icon-button__ripple"></div>
+						shop
+					</button>
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" style="visibility: hidden"></button>
+				</section>
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+					<button class="mdc-icon-button" id="logo-on-app-bar" onclick="goToHomePage()">
+						<div class="mdc-icon-button__ripple ripple ripple-above-button-image ripple-for-rounded-images"></div>
+						<img class="mdc-elevation--z8 rounded-images" src="values/images/logo_g.png"/>
+					</button>
+				</section>
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openMessenger()">
+						<div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+						<img src="values/images/ic_messenger.png"/>
+					</button>
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openFacebook()" aria-label="Bookmark this page">
+						<div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+						<img src="values/images/ic_facebook.png"/>
+					</button>
+				</section>
 			</div>
-		</div>
-		<div id="app_list">
-			<div class="app_des">
-				<h2>Kontroler Głośności</h2>
-				Dostosuj głośność multimediów do swojego tempa.<br><br>
-				<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.WoliumSpid&utm_source=GSite&utm_campaign=HomePage'><img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/></a>
+		</header>
+		<main class="mdc-top-app-bar--short-fixed-adjust">
+			<div id="below_app_bar"></div>
+			<div class="mdc-layout-grid">
+				<div class="mdc-layout-grid__inner">
+					<!-- <div class="mdc-layout-grid__cell--span-2"></div> 
+					<div class="mdc-layout-grid__cell--span-8"></div> //Dla Zmiany aplikacji, dostepne|chronologicznie 
+					<div class="mdc-layout-grid__cell--span-12">
+						<button id="change-language-btn" class="mdc-button mdc-button--outlined" disabled>
+							<span class="mdc-button__ripple"></span>
+							<span class="mdc-button__label">English</span>
+						</button>
+					</div> -->
+					<div class="center-cell
+								mdc-layout-grid__cell--span-12"></div>
+					<div class="mdc-layout-grid__cell--span-6-desktop
+								mdc-layout-grid__cell--span-4-tablet
+								mdc-layout-grid__cell--span-4-phone">	<!-- Organizer Ucznia -->
+						<div class="mdc-layout-grid__inner">
+							<div class="mdc-layout-grid__cell--span-2-desktop
+										mdc-layout-grid__cell--span-8-tablet 
+										mdc-layout-grid__cell--span-4-phone">
+							</div>
+							<div class="logo-app
+										mdc-layout-grid__cell--span-3-desktop
+										mdc-layout-grid__cell--span-3-tablet 
+										mdc-layout-grid__cell--span-2-phone
+										mdc-layout-grid__cell--align-middle">	<!-- Organizer Ucznia logo -->
+								<img class="rounded-images mdc-elevation--z8" src="values/images/logo_bg.png"/>
+								<img class="logo-app-icon" src="values/images/ic_organizer_ucznia.png"/>
+							</div>
+							<div class="info-app
+										mdc-layout-grid__cell--span-5-desktop
+										mdc-layout-grid__cell--span-5-tablet
+										mdc-layout-grid__cell--span-2-phone">	<!-- Organizer Ucznia info -->
+								<h2>Organizer Ucznia</h2>
+								Zadbaj o rok szkolny, notuj zadania, wpisuj oceny, a aplikacja zajmie się resztą.<br><br>
+								<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.DziennikUcznia&utm_source=GSite&utm_campaign=HomePage'>
+									<img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/>
+								</a>
+							</div>
+							<div class="mdc-layout-grid__cell--span-2-desktop
+										mdc-layout-grid__cell--span-8-tablet
+										mdc-layout-grid__cell--span-4-phone">		
+							</div>
+						</div>
+					</div>
+					<div class="mdc-layout-grid__cell--span-6-desktop
+								mdc-layout-grid__cell--span-4-tablet
+								mdc-layout-grid__cell--span-4-phone">	<!-- Kontroler Glosnosci -->
+						<div class="mdc-layout-grid__inner">
+							<div class="mdc-layout-grid__cell--span-2-desktop
+										mdc-layout-grid__cell--span-8-tablet
+										mdc-layout-grid__cell--span-4-phone">
+							</div>
+							<div class="logo-app
+										mdc-layout-grid__cell--span-3-desktop
+										mdc-layout-grid__cell--span-3-tablet
+										mdc-layout-grid__cell--span-2-phone
+										mdc-layout-grid__cell--align-middle"">	<!-- Kontroler Glosnosci logo -->
+								<img class="rounded-images mdc-elevation--z8" src="values/images/logo_bg.png"/>
+								<img class="logo-app-icon" src="values/images/ic_kontroler_glosnosci.png"/>
+							</div>
+							<div class="info-app
+										mdc-layout-grid__cell--span-5-desktop
+										mdc-layout-grid__cell--span-5-tablet
+										mdc-layout-grid__cell--span-2-phone">	<!-- Kontroler Glosnosci info -->
+								<h2>Kontroler Głośności</h2>
+								Dostosuj głośność multimediów do swojego tempa.<br><br>
+								<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.WoliumSpid&utm_source=GSite&utm_campaign=HomePage'><img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/></a>
+							</div>
+							<div class="mdc-layout-grid__cell--span-2-desktop
+										mdc-layout-grid__cell--span-8-tablet
+										mdc-layout-grid__cell--span-4-phone">
+							</div>
+						</div>
+					</div>
+					<div class="center-cell
+								mdc-layout-grid__cell--span-12"></div>
+				</div>
 			</div>
-			<img class="logo app_logo" src="values/images/logo kontroler glosnosci.png"/>
-		</div>
-		<br>
-		<h3>🛠 Strona w budowie 🛠</h3>
-		<h4><a class="button" href="https://www.facebook.com/GuzoooApps">Fanpage - Facebook</a></h4>
-		<h4><a class="button" href="https://www.messenger.com/t/GuzoooApps">Napisz do mnie - Messenger</a></h4>
-		<h4><a class="button" href="https://play.google.com/store/apps/dev?id=6989903521291385498">Strona Programisty w Google Play</a></h4>
-		<p style="font-size: 10px; text-align: center;">
-			Google Play i logo Google Play są znakami towarowymi firmy Google LLC.
-		</p>
+			<div id="footer">
+				<p class="description footer">
+					🛠 Strona w rozwoju 🛠
+				</p>
+				<p class="description footer">
+					Google Play i logo Google Play są znakami towarowymi firmy Google LLC.
+				</p>
+			</div>
+		</main>
 	</body>
+	<script src="values/code/base.js"></script>
+	<script src="values/code/apps_info.js"></script>
 </html>

@@ -1,5 +1,10 @@
 :root {
     --margin-standard: 8px;
+    --margin-top-logo-on-app-bar-center: -10px;
     
+    --lenght-logo-on-app-bar: 100px;
+    --lenght-img-on-app-bar: 24px;
     --lenght-logo: 150px;
+    
+    --animation-time: 300ms; /* 300ms */
 }

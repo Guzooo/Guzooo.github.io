@@ -2,104 +2,142 @@
 	<head>
 		<title>Polityka prywatności • Guzooo</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="../values/images/fav.png" type="image/png">
+		<meta name="theme-color" content="#1f1f1f">
+
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
 		<link rel="stylesheet" href="../values/styles/base.css">
+		<link rel="stylesheet" href="../values/styles/app_bar.css">
 		<link rel="stylesheet" href="../values/styles/dimmensions.css">
 		<link rel="stylesheet" href="../values/styles/colors.css">
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="../values/styles/text.css">
+		<link rel="stylesheet" href="../values/styles/view.css">
 	</head>
 	<body>
-		<h1 style="text-align: center;">Polityka prywatności</h1>
-        
-        <br>
-
-
-        <p class="description">
-            Polityka Prywatności z dnia 20.09.2022r.<br>
-            W przypadku zmian w Polityce Prywatności odpowiednia informacje pokaże się na głównym ekranie aplikacji.
-        </p>
-
-        <br>
-
-
-        <h2>Administrator danych</h2>
-        <p>Administratorem danych osobowych jest niezależny programista działający pod pseudonimem "Guzooo".<p>
-        <h3>Kontakt:</h3>
-        &emsp;<span class="material-icons" style="vertical-align: middle;">shop</span> - <a class="button" href="https://play.google.com/store/apps/dev?id=6989903521291385498">https://play.google.com/store/apps/dev?id=6989903521291385498</a><br>
-        &emsp;<span class="material-icons" style="vertical-align: middle;">facebook</span> - <a class="button" href="https://www.facebook.com/GuzoooApps">https://www.facebook.com/GuzoooApps</a><br>
-        &emsp;<span class="material-icons" style="vertical-align: middle;">email</span> - <a class="button" href="mailto:guzooo-guzooo@o2.pl">guzooo-guzooo@o2.pl</a><br>
-        
-        <br>
-
-
-        <h2>Gromadzone dane</h2>
-        <p>
-            Aplikacje głównie zbierają dane, które jawnie <u>wprowadza użytkownik</u>, na przykład "Organizer Ucznia" zbiera między innymi informacje o przedmiotach, oceny oraz notatki.
-            Użytkownik ma pełną kontrole nad tego typu danymi, może je modyfikować oraz usuwać.<br>
+        <header class="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-collapsed">
+			<div class="mdc-top-app-bar__row">
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
+					<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="openGooglePlay()">
+						<div class="ripple-above-button-image mdc-icon-button__ripple"></div>
+						shop
+					</button>
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" style="visibility: hidden"></button>
+				</section>
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+					<button class="mdc-icon-button" id="logo-on-app-bar" onclick="goToHomePage()">
+						<div class="mdc-icon-button__ripple ripple ripple-above-button-image ripple-for-rounded-images"></div>
+						<img class="mdc-elevation--z8 rounded-images" src="../values/images/logo_g.png"/>
+					</button>
+				</section>
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openMessenger()">
+						<div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+						<img src="../values/images/ic_messenger.png"/>
+					</button>
+					<button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openFacebook()" aria-label="Bookmark this page">
+						<div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+						<img src="../values/images/ic_facebook.png"/>
+					</button>
+				</section>
+			</div>
+		</header>
+		<main class="mdc-top-app-bar--short-fixed-adjust">
+            <h1 style="text-align: center;">Polityka prywatności</h1>
+            
             <br>
-            Aplikacje również przechowują dane, które wspomagają prawidłowe działanie.
-            Użytkownik nie ma możliwości ich modyfikowania, a usunięcie odbywa się poprzez usunięcie danych aplikacji z poziomu systemu, bądź przez odinstalowanie aplikacji.<br>
-            <u>Data pierwszego uruchomienia</u> - dzięki  której pytanie o udzielenie opini o aplikacji oraz reklamy nie wyświetlają się nowym użytkownikom.<br>
-            <u>Wersja aplikacji przy instalacji oraz aktualna</u> - które mogą być wykorzystywane do naprawiania błędów przy kolejnych aktualizacjach.<br>
+
+
+            <p class="description">
+                Polityka Prywatności z dnia 20.09.2022r.<br>
+                W przypadku zmian w Polityce Prywatności odpowiednia informacje pokaże się na głównym ekranie aplikacji.
+            </p>
+
             <br>
-            Poszczególne aplikacje mogą potrzebować też innych danych, wszystkie przedstawiono poniżej.
-        </p>
-        <h3>Kontroler Głośności</h3>
-        <p>
-            <u>Aktualna szybkość</u> - Aplikacja po udzieleniu pozwolenia na dostęp do lokalizacji, podczas włączonej usługi
-            (Włączona usługa widoczna jest na pasku powiadomień, chyba, że użytkownik wyłączył powiadomienia. Stan usługi można też sprawdzić włączając aplikacje, na głównym ekranie)
-            cyklicznie sprawdza szybkość użytkownika.
-            Przechowuje pięć ostatnich szybkości, których używa do zmiany etapów.
-            Dane są przechowywane w pamięci operacyjnej, nie są trwale przechowywane.
-        </p>
-        
-        <br>
 
 
-        <h2>Zewnętrzne SDK</h2>
-        <p>
-            W celu zapewnienia najlepszych doświadczeń użytkownika aplikacje wykorzystują SDK Google'a:<br>
-            <u>AdMob</u> - <a class="button" href="https://admob.google.com">https://admob.google.com</a> - obsługa reklam<br>
+            <h2>Administrator danych</h2>
+            <p>Administratorem danych osobowych jest niezależny programista działający pod pseudonimem "Guzooo".<p>
+            <h3>Kontakt:</h3>
+            &emsp;<span class="material-icons" style="vertical-align: middle;">shop</span> - <a class="button" href="https://play.google.com/store/apps/dev?id=6989903521291385498">https://play.google.com/store/apps/dev?id=6989903521291385498</a><br>
+            &emsp;<span class="material-icons" style="vertical-align: middle;">facebook</span> - <a class="button" href="https://www.facebook.com/GuzoooApps">https://www.facebook.com/GuzoooApps</a><br>
+            &emsp;<span class="material-icons" style="vertical-align: middle;">email</span> - <a class="button" href="mailto:guzooo-guzooo@o2.pl">guzooo-guzooo@o2.pl</a><br>
+            
             <br>
-            Zapoznaj się z ich polityką prywatności.
-        </p>
-
-        <br>
 
 
-        <h2>Obowiązkowe i dobrowolne dane</h2>
-        <p>
-            Dane wprowadzane przez użytkownika są dobrowolne.<br>
-            Dane wspomagające prawidłowe działanie są obowiązkowe i przetwarzane od pierwszego uruchomienia.<br>
-            Dane o lokalizacji są dobrowolne i przetwarzane po uprzednim przyznaniu aplikacji odpowiednich uprawnień.<br>
-            Dane wymagane przez zewnętrzne SDK są obowiązkowe i przetwarzane po zatwierdzeniu tej polityki prywatności przez użytkownika.
-        </p>
-
-        <br>
-
-        
-        <h2>Jak długo i gdzie dane są przetwarzane</h2>
-        <p>
-            Dane wprowadzane przez użytkowników są przetwarzane do ich usunięcia przez użytkownika lub do odinstalowania aplikacji z urządzenia.<br>
-            Dane wspomagające prawidłowe działanie są przetwarzane do odinstalowania aplikacji z urządzenia.<br>
-            Dane o lokalizacji są przetwarzane w momencie wykonywania określonych operacji, zawsze wizualizowane za pomocą powiadomień.<br>
-            Powyższe dane są przechowywane wyłącznie lokalnie na urządzeniu użytkownika.<br>
+            <h2>Gromadzone dane</h2>
+            <p>
+                Aplikacje głównie zbierają dane, które jawnie <u>wprowadza użytkownik</u>, na przykład "Organizer Ucznia" zbiera między innymi informacje o przedmiotach, oceny oraz notatki.
+                Użytkownik ma pełną kontrole nad tego typu danymi, może je modyfikować oraz usuwać.<br>
+                <br>
+                Aplikacje również przechowują dane, które wspomagają prawidłowe działanie.
+                Użytkownik nie ma możliwości ich modyfikowania, a usunięcie odbywa się poprzez usunięcie danych aplikacji z poziomu systemu, bądź przez odinstalowanie aplikacji.<br>
+                <u>Data pierwszego uruchomienia</u> - dzięki  której pytanie o udzielenie opinii o aplikacji oraz reklamy nie wyświetlają się nowym użytkownikom.<br>
+                <u>Wersja aplikacji przy instalacji oraz aktualna</u> - które mogą być wykorzystywane do naprawiania błędów przy kolejnych aktualizacjach.<br>
+                <br>
+                Poszczególne aplikacje mogą potrzebować też innych danych, wszystkie przedstawiono poniżej.
+            </p>
+            <h3>Kontroler Głośności</h3>
+            <p>
+                <u>Aktualna szybkość</u> - Aplikacja po udzieleniu pozwolenia na dostęp do lokalizacji, podczas włączonej usługi
+                (Włączona usługa widoczna jest na pasku powiadomień, chyba, że użytkownik wyłączył powiadomienia. Stan usługi można też sprawdzić włączając aplikacje, na głównym ekranie)
+                cyklicznie sprawdza szybkość użytkownika.
+                Przechowuje pięć ostatnich szybkości, których używa do zmiany etapów.
+                Dane są przechowywane w pamięci operacyjnej, nie są trwale przechowywane.
+            </p>
+            
             <br>
-            Informacje o tym jak długo oraz gdzie przetwarzane są dane przez zewnętrzne SDK można znaleźć w ich polityce prywatności.
-        </p>
-
-        <br>
 
 
-        <h2>Prawa do danych</h2>
-        <p>
-            W każdym momencie użytkownik ma możliwość sprawdzić jakie dane są przetwarzane.
-            Aby to zrobić wystarczy z poziomu aplikacji przejść do <u>ustawień</u>, a następnie w sekcji <u>prywatność</u> kliknąć <u>moje dane</u>.<br>
-            Użytkownik ma możliwość usunięcia swoich danych w każdym momencie poprzez odinstalowanie aplikacji z urządzenia.<br>
+            <h2>Zewnętrzne SDK</h2>
+            <p>
+                W celu zapewnienia najlepszych doświadczeń użytkownika aplikacje wykorzystują SDK Google'a:<br>
+                <u>AdMob</u> - <a class="button" href="https://admob.google.com">https://admob.google.com</a> - obsługa reklam<br>
+                <br>
+                Zapoznaj się z ich polityką prywatności.
+            </p>
+
             <br>
-            Informacje o prawach do danych przetwarzanych przez zewnętrzne SDK można znaleźć w ich polityce prywatności.            
-        </p>
+
+
+            <h2>Obowiązkowe i dobrowolne dane</h2>
+            <p>
+                Dane wprowadzane przez użytkownika są dobrowolne.<br>
+                Dane wspomagające prawidłowe działanie są obowiązkowe i przetwarzane od pierwszego uruchomienia.<br>
+                Dane o lokalizacji są dobrowolne i przetwarzane po uprzednim przyznaniu aplikacji odpowiednich uprawnień.<br>
+                Dane wymagane przez zewnętrzne SDK są obowiązkowe i przetwarzane po zatwierdzeniu tej polityki prywatności przez użytkownika.
+            </p>
+
+            <br>
+
+            
+            <h2>Jak długo i gdzie dane są przetwarzane</h2>
+            <p>
+                Dane wprowadzane przez użytkowników są przetwarzane do ich usunięcia przez użytkownika lub do odinstalowania aplikacji z urządzenia.<br>
+                Dane wspomagające prawidłowe działanie są przetwarzane do odinstalowania aplikacji z urządzenia.<br>
+                Dane o lokalizacji są przetwarzane w momencie wykonywania określonych operacji, zawsze wizualizowane za pomocą powiadomień.<br>
+                Powyższe dane są przechowywane wyłącznie lokalnie na urządzeniu użytkownika.<br>
+                <br>
+                Informacje o tym jak długo oraz gdzie przetwarzane są dane przez zewnętrzne SDK można znaleźć w ich polityce prywatności.
+            </p>
+
+            <br>
+
+
+            <h2>Prawa do danych</h2>
+            <p>
+                W każdym momencie użytkownik ma możliwość sprawdzić jakie dane są przetwarzane.
+                Aby to zrobić wystarczy z poziomu aplikacji przejść do <u>ustawień</u>, a następnie w sekcji <u>prywatność</u> kliknąć <u>moje dane</u>.<br>
+                Użytkownik ma możliwość usunięcia swoich danych w każdym momencie poprzez odinstalowanie aplikacji z urządzenia.<br>
+                <br>
+                Informacje o prawach do danych przetwarzanych przez zewnętrzne SDK można znaleźć w ich polityce prywatności.            
+            </p>
+        </main>
     </body>
+	<script src="../values/code/base.js"></script>
 </html>

@@ -1,0 +1,12 @@
+.button{
+    color: var(--first-g);
+    font-size: 20px;
+}
+
+.button:active{
+    color: var(--second-g);
+}
+
+.button:visited{
+    color: var(--third-g);
+}

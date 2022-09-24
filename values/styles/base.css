@@ -1,6 +1,5 @@
 body{
     font-family: Rubik;
-    margin: var(--margin-standard);
     background-color: var(--color-primary);
     color: var(--color-secondary);
 }
@@ -23,47 +22,24 @@ body{
     box-shadow: inset 0 0 10px 10px var(--color-secondary);
 }
 
-/*App presentation stuff*/
-.logo{
-    display: block;
-    height: var(--lenght-logo);
-    margin-left: auto;
-    margin-right: auto;
+#change-language-btn{
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
-.app_logo{
-    display: inline-block;
+::-webkit-scrollbar-thumb:hover { /* Handle */
+    box-shadow: inset 0 0 10px 10px var(--color-secondary);
 }
 
-.app_des{
-    margin-left: 50px;
-    margin-right: 50px;
-    display: inline-block;
-    -ms-transform: translateY(-0%);
-    transform: translateY(-0%);
+.ripple-for-rounded-images {
+    scale: 80.5%;
+    transition: scale var(--animation-time);
 }
 
-#app_list{
-    text-align: center;
-    margin-top: var(--margin-standard);
-    margin-bottom: var(--margin-standard);
+.ripple-above-button-image {
+    z-index: 0 !important;
 }
 
-/*Views staff*/
-.button{
-    color: var(--first-g);
-    font-size: 20px;
-}
-
-.button:active{
-    color: var(--second-g);
-}
-
-.button:visited{
-    color: var(--third-g);
-}
-
-/*Text Stuff*/
-.description{
-    font-size: 80%;
+.rounded-images {
+    border-radius: 50%;
 }
