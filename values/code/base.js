@@ -1,6 +1,7 @@
 setAppBar();
 setRipple();
 disableCopyImageByDragg();
+centerAppsWhenHaveSpace();
 
 /* links on app bar */
 function openGooglePlay(){
@@ -42,4 +43,24 @@ function disableCopyImageByDragg(){
     const imgs = document.getElementsByTagName('img')
     for (const img of imgs)
         img.setAttribute("draggable", false);
+}
+
+function centerAppsWhenHaveSpace(){
+    var appBarBelow = document.getElementById("below_app_bar");
+    var footer = document.getElementById("footer");
+    var grid = document.getElementsByClassName("mdc-layout-grid")[0];
+    var appBarHeight = appBarBelow.offsetHeight + appBarBelow.offsetTop;
+    var footerHeight = footer.offsetHeight;
+    var gridHeight = grid.offsetHeight + 30;
+    var windowHeight = innerHeight;
+    console.log(appBarHeight *2 + gridHeight);
+    console.log(  innerHeight);
+    if((appBarHeight + footerHeight + gridHeight) < windowHeight){
+        console.log("B");
+        var centerCells = document.getElementsByClassName("center-cell");
+        centerCellHeight = (windowHeight - appBarHeight - footerHeight - gridHeight)/2;
+        centerCells[0].style.height = centerCellHeight;
+        centerCells[1].style.height = centerCellHeight;
+    }
+
 }
