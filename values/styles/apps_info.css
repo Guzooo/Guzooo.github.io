@@ -1,0 +1,23 @@
+.logo-app{  /* logo app */
+    position: relative;
+}
+
+.logo-app img:first-child { /* logo background */
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+.logo-app-icon {    /* logo icon */
+    max-width: 100%;
+    max-height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: top var(--animation-time), left var(--animation-time);
+    pointer-events: visible;
+}
+
+.info-app { /* info app */
+    text-align: center;
+}

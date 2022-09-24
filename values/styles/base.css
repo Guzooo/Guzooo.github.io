@@ -1,6 +1,5 @@
 body{
     font-family: Rubik;
-    margin: var(--margin-standard);
     background-color: var(--color-primary);
     color: var(--color-secondary);
 }
@@ -19,14 +18,13 @@ body{
     border: solid 4px transparent;
 }
 
-::-webkit-scrollbar-thumb:hover { /* Handle */
-    box-shadow: inset 0 0 10px 10px var(--color-secondary);
+#change-language-btn{
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
-.logo{
-    height: var(--lenght-logo);
-    margin-left: auto;
-    margin-right: auto;
+::-webkit-scrollbar-thumb:hover { /* Handle */
+    box-shadow: inset 0 0 10px 10px var(--color-secondary);
 }
 
 .ripple-for-rounded-images {
@@ -38,6 +36,6 @@ body{
     z-index: 0 !important;
 }
 
-.with-shadow-for-rounded-images {
-    border-radius:100px;
+.rounded-images {
+    border-radius: 50%;
 }
