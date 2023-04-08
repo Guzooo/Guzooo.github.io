@@ -18,8 +18,8 @@
 		<link rel="stylesheet" href="../values/styles/text.css">
 		<link rel="stylesheet" href="../values/styles/view.css">
 	</head>
-	<body>
-        <header class="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-collapsed">
+	<body class="insetsMarginLeft insetsMarginTop insetsMarginRight insetsMarginBottom">
+        <header class="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-collapsed invisibleInApp">
 			<div class="mdc-top-app-bar__row">
 				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
 					<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="openGooglePlay()">
@@ -46,7 +46,7 @@
 				</section>
 			</div>
 		</header>
-		<main class="mdc-top-app-bar--short-fixed-adjust">
+		<main class="mdc-top-app-bar--short-fixed-adjust clearInApp">
             <h1 style="text-align: center;">Polityka prywatności</h1>
             
             <br>
@@ -140,4 +140,5 @@
         </main>
     </body>
 	<script src="../values/code/base.js"></script>
+    <script src="../values/code/in_app.js"></script>
 </html>
