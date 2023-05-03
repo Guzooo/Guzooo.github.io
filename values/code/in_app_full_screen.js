@@ -67,7 +67,7 @@ const InAppFullScreenModule = (function(){
     }
 
     function setDimension(type, direction){
-        const length = parseInt(getInset(direction));
+        const length = parseInt(insets[direction]);
         if(length == null)
             return;
         const directionWithBigLetter = direction.charAt(0).toUpperCase() + direction.slice(1);
@@ -78,19 +78,6 @@ const InAppFullScreenModule = (function(){
             const current = prev + length;
             element.style.setProperty(type + "-" + direction, current + "px");
         });
-    }
-
-    function getInset(direction){
-        switch (direction){
-            case "left":
-                return insets[0];
-            case "top":
-                return insets[1];
-            case "right":
-                return insets[2];
-            case "bottom":
-                return insets[3];
-        }
     }
 })();
 
