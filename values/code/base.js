@@ -17,13 +17,14 @@ function openFacebook(){
 }
 
 function goToHomePage(){
-    switch (location.href) {
+    let url = location.href.split("?")[0];
+    switch (url) {
         case "https://guzooo.github.io/":
         case "http://127.0.0.1/Guzooo/":
             scrollTo({top: 0, behavior: 'smooth'});
             break;
         default:
-            location.href = "http://guzooo.github.io";
+            location.href = "https://guzooo.github.io";
             break;
     }
 }
@@ -46,6 +47,7 @@ function disableCopyImageByDragg(){
 }
 
 function centerAppsWhenHaveSpace(){
+    //let url = location.href.split("?")[0];
     switch (location.href){
         case "https://guzooo.github.io/":
         case "http://127.0.0.1/Guzooo/":
