@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>Dziki Zachód • Guzooo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../values/images/fav.png" type="image/png">
+    <meta name="theme-color" content="#1f1f1f">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <link rel="stylesheet" href="../values/styles/base.css">
+    <link rel="stylesheet" href="../values/styles/app_bar.css">
+    <link rel="stylesheet" href="../values/styles/dimmensions.css">
+    <link rel="stylesheet" href="../values/styles/colors.css">
+    <link rel="stylesheet" href="../values/styles/text.css">
+    <link rel="stylesheet" href="../values/styles/view.css">
+    <link rel="stylesheet" href="../values/styles/apps_info.css">
+</head>
+<body class="insetsMarginLeft insetsMarginTop insetsMarginRight insetsMarginBottom">
+<header class="mdc-top-app-bar mdc-top-app-bar--short insetsMarginTop insetsPaddingLeft insetsPaddingRight">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="openGooglePlay()">
+                <div class="ripple-above-button-image mdc-icon-button__ripple"></div>
+                shop
+            </button>
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" style="visibility: hidden"></button>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="mdc-icon-button" id="logo-on-app-bar" onclick="goToHomePage()">
+                <div class="mdc-icon-button__ripple ripple ripple-above-button-image ripple-for-rounded-images"></div>
+                <img class="mdc-elevation--z8 rounded-images" src="../values/images/logo_g.png"/>
+            </button>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openMessenger()">
+                <div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+                <img src="../values/images/ic_messenger.png"/>
+            </button>
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openFacebook()" aria-label="Bookmark this page">
+                <div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+                <img src="../values/images/ic_facebook.png"/>
+            </button>
+        </section>
+    </div>
+</header>
+<main class="mdc-top-app-bar--short-fixed-adjust clearInApp">
+    <div id="below_app_bar"></div>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="logo-app
+                            mdc-layout-grid__cell--align-middle">	<!-- Kontroler Glosnosci logo -->
+                <img class="rounded-images mdc-elevation--z8" src="../values/images/logo_bg_dziki.png"/>
+                <img class="logo-app-icon" src="../values/images/dziki.png"/>
+            </div>
+            <h1>Dziki Zachód</h1>
+            <p class="mdc-layout-grid__cell--span-12">
+                Zaczęło się od tęsknoty za czasami Dzikiego Zachodu, którymi zawsze byłam zafascynowany. Miałem wizję przeniesienia ludzi w świat kowbojów, saloonów i bezkresnych preri. Dlatego, gdy dowiedziałem się o planowanej imprezie tematycznej w sąsiedztwie, uznając to za doskonałą okazję, postanowiłem podjąć wyzwanie. Mój cel był jasny - stworzyć aplikację, która nie tylko dodawałaby do atmosfery imprezy, ale także dostarczała uczestnikom nowych i ekscytujących wrażeń. Zabrałem się za pracę, pomimo ograniczonych środków finansowych, oferując aplikację za darmo, głównie po to, aby zdobyć doświadczenie. To było moje pierwsze prawdziwe wejście w świat tworzenia aplikacji, a z każdym kodowanym wierszem zbliżałem się do zrealizowania mojego marzenia. W rezultacie dwie edycje "Dzikiego Zachodu" zyskały uznanie, a ja zdobyłem cenne umiejętności, które posłużyły mi do kolejnych projektów.            </p>
+
+            <h2 class="mdc-layout-grid__cell--span-12">Wersja 2017</h2>
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/11.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/12.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/13.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/14.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/15.png"/>
+
+            <h2 class="mdc-layout-grid__cell--span-12">Wersja 2018</h2>
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/1.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/2.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/3.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/4.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/5.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/6.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/7.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/dz/8.png"/>
+        </div>
+    </div>
+</main>
+</body>
+<script src="../values/code/base.js"></script>
+<script src="../values/code/apps_info.js"></script>
+<script src="../values/code/in_app_full_screen.js"></script>
+</html>

@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Kontroler Głośności • Guzooo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../values/images/fav.png" type="image/png">
+    <meta name="theme-color" content="#1f1f1f">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <link rel="stylesheet" href="../values/styles/base.css">
+    <link rel="stylesheet" href="../values/styles/app_bar.css">
+    <link rel="stylesheet" href="../values/styles/dimmensions.css">
+    <link rel="stylesheet" href="../values/styles/colors.css">
+    <link rel="stylesheet" href="../values/styles/text.css">
+    <link rel="stylesheet" href="../values/styles/view.css">
+    <link rel="stylesheet" href="../values/styles/apps_info.css">
+</head>
+<body class="insetsMarginLeft insetsMarginTop insetsMarginRight insetsMarginBottom">
+<header class="mdc-top-app-bar mdc-top-app-bar--short insetsMarginTop insetsPaddingLeft insetsPaddingRight">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="openGooglePlay()">
+                <div class="ripple-above-button-image mdc-icon-button__ripple"></div>
+                shop
+            </button>
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" style="visibility: hidden"></button>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="mdc-icon-button" id="logo-on-app-bar" onclick="goToHomePage()">
+                <div class="mdc-icon-button__ripple ripple ripple-above-button-image ripple-for-rounded-images"></div>
+                <img class="mdc-elevation--z8 rounded-images" src="../values/images/logo_g.png"/>
+            </button>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openMessenger()">
+                <div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+                <img src="../values/images/ic_messenger.png"/>
+            </button>
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openFacebook()" aria-label="Bookmark this page">
+                <div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+                <img src="../values/images/ic_facebook.png"/>
+            </button>
+        </section>
+    </div>
+</header>
+<main class="mdc-top-app-bar--short-fixed-adjust clearInApp">
+    <div id="below_app_bar"></div>
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="logo-app
+                            mdc-layout-grid__cell--align-middle">	<!-- Kontroler Glosnosci logo -->
+                <img class="rounded-images mdc-elevation--z8" src="../values/images/logo_bg.png"/>
+                <img class="logo-app-icon" src="../values/images/ic_kontroler_glosnosci.png"/>
+            </div>
+            <h1>Kontroler Głośności</h1>
+            <p class="mdc-layout-grid__cell--span-12">
+                W jednym z letnich popołudni, pędząc rowerem przez malownicze krajobrazy, zdałem sobie sprawę z jednego irytującego problemu - głośności dźwięku w słuchawkach. Przy wyższych prędkościach szum wiatru przeszkadzał mi w słuchaniu ulubionej muzyki, a jednocześnie na niższych prędkościach głośność była zbyt niska. Wtedy zrodził się pomysł na "Kontroler Głośności". Chciałem stworzyć coś, co pozwoliłoby dostosowywać głośność dźwięku w słuchawkach w zależności od prędkości jazdy na rowerze.
+
+                Rozpocząłem projekt od analizy czujników dostępnych w smartfonach, które mogłyby pomóc w śledzeniu prędkości. Następnie skupiłem się na implementacji algorytmu, który pozwoliłby płynnie dostosowywać głośność w zależności od zmieniającej się prędkości roweru. Celem było nie tylko stworzenie aplikacji praktycznej dla rowerzystów, ale także zminimalizowanie zakłóceń dla innych użytkowników ścieżki rowerowej. Idea była prosta - głośniej przy szybszej jeździe, cichszą przy wolniejszej, aby jednocześnie cieszyć się muzyką i szumem otoczenia. To połączenie praktyczności, bezpieczeństwa i wygody jazdy na rowerze zainspirowało powstanie "Kontrolera Głośności".
+            </p>
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/kg/PL-Screenshot1.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/kg/PL-Screenshot2.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/kg/PL-Screenshot3.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/kg/PL-Screenshot4.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/kg/PL-Screenshot5.png"/>
+
+            <img style="width:100%" class="mdc-layout-grid__cell--span-2-desktop
+                        mdc-layout-grid__cell--span-2-tablet
+                        mdc-layout-grid__cell--span-2-phone"
+                 src="../values/images/kg/PL-Screenshot6.png"/>
+        </div>
+    </div>
+</main>
+</body>
+<script src="../values/code/base.js"></script>
+<script src="../values/code/apps_info.js"></script>
+<script src="../values/code/in_app_full_screen.js"></script>
+</html>
