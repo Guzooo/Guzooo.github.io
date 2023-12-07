@@ -1,0 +1,182 @@
+<html>
+<head>
+    <title>Polityka prywatności • Guzooo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../values/images/fav.png" type="image/png">
+    <meta name="theme-color" content="#1f1f1f">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <link rel="stylesheet" href="../values/styles/base.css">
+    <link rel="stylesheet" href="../values/styles/app_bar.css">
+    <link rel="stylesheet" href="../values/styles/dimmensions.css">
+    <link rel="stylesheet" href="../values/styles/colors.css">
+    <link rel="stylesheet" href="../values/styles/text.css">
+    <link rel="stylesheet" href="../values/styles/view.css">
+    <link rel="stylesheet" href="../values/styles/table.css">
+    <link rel="stylesheet" href="../values/styles/apps_info.css">
+</head>
+<body class="insetsMarginLeft insetsMarginTop insetsMarginRight insetsMarginBottom">
+<header class="mdc-top-app-bar mdc-top-app-bar--short insetsMarginTop insetsPaddingLeft insetsPaddingRight">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" onclick="openGooglePlay()">
+                <div class="ripple-above-button-image mdc-icon-button__ripple"></div>
+                shop
+            </button>
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" style="visibility: hidden"></button>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="mdc-icon-button" id="logo-on-app-bar" onclick="goToHomePage()">
+                <div class="mdc-icon-button__ripple ripple ripple-above-button-image ripple-for-rounded-images"></div>
+                <img class="mdc-elevation--z8 rounded-images" src="../values/images/logo_g.png"/>
+            </button>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openMessenger()">
+                <div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+                <img src="../values/images/ic_messenger.png"/>
+            </button>
+            <button class="mdc-top-app-bar__action-item mdc-icon-button" onclick="openFacebook()" aria-label="Bookmark this page">
+                <div class="mdc-icon-button__ripple ripple-above-button-image"></div>
+                <img src="../values/images/ic_facebook.png"/>
+            </button>
+        </section>
+    </div>
+</header>
+<main class="mdc-top-app-bar--short-fixed-adjust clearInApp">
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div id="below_app_bar"></div>
+            <p class="mdc-layout-grid__cell--span-12">
+                Moja przygoda z tworzeniem aplikacji rozpoczęła się w roku 2017, kiedy to zdecydowałem się stworzyć aplikację zatytułowaną "Dziki Zachód". To było moje pierwsze podejście do świata programowania mobilnego, a aplikacja miała na celu przenieść użytkowników w atmosferę Dzikiego Zachodu, oferując zarówno rozrywkę, jak i ciekawe funkcje.
+            </p>
+            <p class="mdc-layout-grid__cell--span-12">
+                Z powodzeniem zrealizowałem dwie edycje tej aplikacji w latach 2017 i 2018, co pozwoliło mi zgłębić różne aspekty programowania i projektowania interfejsu użytkownika. Następnie nadszedł czas, aby wykorzystać zdobytą wiedzę w praktyce, co skłoniło mnie do tworzenia aplikacji na zlecenie. Te projekty, dostosowane do różnych imprez tematycznych, były nie tylko wyzwaniem, ale także szansą na zrozumienie potrzeb klientów i dostosowywanie się do różnorodnych wymagań.
+            </p>
+            <div class="mdc-layout-grid__cell--span-6-desktop
+                                        mdc-layout-grid__cell--span-6-tablet
+                                        mdc-layout-grid__cell--span-4-phone">	<!-- Dziki Zachód -->
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-2-desktop
+                                                mdc-layout-grid__cell--span-8-tablet
+                                                mdc-layout-grid__cell--span-4-phone">
+                    </div>
+                    <div class="logo-app
+                                                mdc-layout-grid__cell--span-3-desktop
+                                                mdc-layout-grid__cell--span-3-tablet
+                                                mdc-layout-grid__cell--span-2-phone
+                                                mdc-layout-grid__cell--align-middle">	<!-- Dziki Zachód logo -->
+                    <img class="rounded-images mdc-elevation--z8" src="../values/images/logo_bg_dziki.png"/>
+                    <img class="logo-app-icon" src="../values/images/dziki.png"/>
+                </div>
+                <div class="info-app
+                                                mdc-layout-grid__cell--span-5-desktop
+                                                mdc-layout-grid__cell--span-5-tablet
+                                                mdc-layout-grid__cell--span-2-phone">	<!-- Kontroler Glosnosci info -->
+                    <h2>Dziki Zachód 2017 i 2018</h2>
+                    Aplikacja dla użytkowników 3-dniowej imprezy.<br><br>
+                    <a href='../app3' id="but3" class="mdc-button mdc-button--outlined">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Więcej</span>
+                    </a>
+                </div>
+                <div class="mdc-layout-grid__cell--span-2-desktop
+                                                mdc-layout-grid__cell--span-8-tablet
+                                                mdc-layout-grid__cell--span-4-phone">
+                </div>
+            </div>
+            </div>
+            <p class="mdc-layout-grid__cell--span-12">
+                W 2018 roku postanowiłem przejść na kolejny poziom, tworząc "Organizer Ucznia". To było moje pierwsze samodzielne dzieło, urodzone z własnego pomysłu. Aplikacja, dedykowana uczniom, szybko zyskała popularność, przekraczając liczbę 1000 pobrań. To było dla mnie ogromne osiągnięcie, świadczące o użyteczności i akceptacji społeczności.
+            </p>
+            <div class="center-cell
+                                        mdc-layout-grid__cell--span-12"></div>
+            <div class="mdc-layout-grid__cell--span-6-desktop
+                                        mdc-layout-grid__cell--span-6-tablet
+                                        mdc-layout-grid__cell--span-4-phone">	<!-- Organizer Ucznia -->
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-2-desktop
+                                                mdc-layout-grid__cell--span-8-tablet
+                                                mdc-layout-grid__cell--span-4-phone">
+                    </div>
+                    <div class="logo-app
+                                                mdc-layout-grid__cell--span-3-desktop
+                                                mdc-layout-grid__cell--span-3-tablet
+                                                mdc-layout-grid__cell--span-2-phone
+                                                mdc-layout-grid__cell--align-middle">	<!-- Organizer Ucznia logo -->
+                        <img class="rounded-images mdc-elevation--z8" src="../values/images/logo_bg.png"/>
+                        <img class="logo-app-icon" src="../values/images/ic_organizer_ucznia.png"/>
+                    </div>
+                    <div class="info-app
+                                                mdc-layout-grid__cell--span-5-desktop
+                                                mdc-layout-grid__cell--span-5-tablet
+                                                mdc-layout-grid__cell--span-2-phone">	<!-- Organizer Ucznia info -->
+                        <h2>Organizer Ucznia</h2>
+                        Zadbaj o rok szkolny, notuj zadania, wpisuj oceny, a aplikacja zajmie się resztą.<br><br>
+                        <a href='https://play.google.com/store/apps/details?id=pl.Guzooo.DziennikUcznia&utm_source=GSite&utm_campaign=HomePage'
+                           class="mdc-button mdc-button--outlined">
+                            <img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/>
+                        </a>
+                        <a href='../app2' id="but4" class="mdc-button mdc-button--outlined">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__label">Więcej</span>
+                        </a>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-2-desktop
+                                                mdc-layout-grid__cell--span-8-tablet
+                                                mdc-layout-grid__cell--span-4-phone">
+                    </div>
+                </div>
+            </div>
+            <p class="mdc-layout-grid__cell--span-12">
+                Następnie, w 2021 roku, podjąłem się kolejnego wyzwania, tworząc "Kontroler Głośności". Ta aplikacja, oparta na moim własnym pomysle, wyróżnia się innowacyjnym podejściem do interakcji z dźwiękiem. Zmienia głośność na podstawie predkości użytkownika, oferując unikalne doświadczenie audio.
+            </p>
+            <div class="mdc-layout-grid__cell--span-6-desktop
+                                        mdc-layout-grid__cell--span-6-tablet
+                                        mdc-layout-grid__cell--span-4-phone">	<!-- Kontroler Glosnosci -->
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-2-desktop
+                                                mdc-layout-grid__cell--span-8-tablet
+                                                mdc-layout-grid__cell--span-4-phone">
+                    </div>
+                    <div class="logo-app
+                                                mdc-layout-grid__cell--span-3-desktop
+                                                mdc-layout-grid__cell--span-3-tablet
+                                                mdc-layout-grid__cell--span-2-phone
+                                                mdc-layout-grid__cell--align-middle"">	<!-- Kontroler Glosnosci logo -->
+                    <img class="rounded-images mdc-elevation--z8" src="../values/images/logo_bg.png"/>
+                    <img class="logo-app-icon" src="../values/images/ic_kontroler_glosnosci.png"/>
+                </div>
+                <div class="info-app
+                                                mdc-layout-grid__cell--span-5-desktop
+                                                mdc-layout-grid__cell--span-5-tablet
+                                                mdc-layout-grid__cell--span-2-phone">	<!-- Kontroler Glosnosci info -->
+                    <h2>Kontroler Głośności</h2>
+                    Dostosuj głośność multimediów do swojego tempa.<br><br>
+                    <a href='https://play.google.com/store/apps/details?id=pl.Guzooo.WoliumSpid&utm_source=GSite&utm_campaign=HomePage'
+                       class="mdc-button mdc-button--outlined">
+                        <img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/>
+                    </a>
+                    <a href='../app1' id="but3" class="mdc-button mdc-button--outlined">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Więcej</span>
+                    </a>
+                </div>
+                <div class="mdc-layout-grid__cell--span-2-desktop
+                                                mdc-layout-grid__cell--span-8-tablet
+                                                mdc-layout-grid__cell--span-4-phone">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+<script src="../values/code/base.js"></script>
+<script src="../values/code/apps_info.js"></script>
+<script src="../values/code/in_app_full_screen.js"></script>
+</html>

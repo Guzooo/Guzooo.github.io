@@ -10,3 +10,23 @@
 .button:visited{
     color: var(--third-g);
 }
+
+#but1 {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+#but2 {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+#but3 {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+#but4 {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}

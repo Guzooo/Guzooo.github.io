@@ -51,14 +51,16 @@
 			<div id="below_app_bar"></div>
 			<div class="mdc-layout-grid">
 				<div class="mdc-layout-grid__inner">
-					<!-- <div class="mdc-layout-grid__cell--span-2"></div> 
-					<div class="mdc-layout-grid__cell--span-8"></div> //Dla Zmiany aplikacji, dostepne|chronologicznie 
-					<div class="mdc-layout-grid__cell--span-12">
-						<button id="change-language-btn" class="mdc-button mdc-button--outlined" disabled>
+					<div class="mdc-layout-grid__cell--span-12" style="margin: auto;">
+						<a href="history" id="but2" class="mdc-button mdc-button--outlined" style="margin-right: 5px">
 							<span class="mdc-button__ripple"></span>
-							<span class="mdc-button__label">English</span>
-						</button>
-					</div> -->
+							<span class="mdc-button__label">Historia</span>
+						</a>
+						<a href="milestones" id="but1" class="buttt mdc-button mdc-button--outlined">
+							<span class="mdc-button__ripple"></span>
+							<span class="mdc-button__label">Osiągnięcia</span>
+						</a>
+					</div>
 					<div class="center-cell
 								mdc-layout-grid__cell--span-12"></div>
 					<div class="mdc-layout-grid__cell--span-6-desktop
@@ -83,8 +85,13 @@
 										mdc-layout-grid__cell--span-2-phone">	<!-- Organizer Ucznia info -->
 								<h2>Organizer Ucznia</h2>
 								Zadbaj o rok szkolny, notuj zadania, wpisuj oceny, a aplikacja zajmie się resztą.<br><br>
-								<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.DziennikUcznia&utm_source=GSite&utm_campaign=HomePage'>
+								<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.DziennikUcznia&utm_source=GSite&utm_campaign=HomePage'
+								   		class="mdc-button mdc-button--outlined">
 									<img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/>
+								</a>
+								<a href='app2' id="but4" class="mdc-button mdc-button--outlined">
+									<span class="mdc-button__ripple"></span>
+									<span class="mdc-button__label">Więcej</span>
 								</a>
 							</div>
 							<div class="mdc-layout-grid__cell--span-2-desktop
@@ -115,7 +122,14 @@
 										mdc-layout-grid__cell--span-2-phone">	<!-- Kontroler Glosnosci info -->
 								<h2>Kontroler Głośności</h2>
 								Dostosuj głośność multimediów do swojego tempa.<br><br>
-								<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.WoliumSpid&utm_source=GSite&utm_campaign=HomePage'><img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/></a>
+								<a href='https://play.google.com/store/apps/details?id=pl.Guzooo.WoliumSpid&utm_source=GSite&utm_campaign=HomePage'
+								   		class="mdc-button mdc-button--outlined">
+									<img style='height: 50px;' alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png'/>
+								</a>
+								<a href='app1' id="but3" class="mdc-button mdc-button--outlined">
+									<span class="mdc-button__ripple"></span>
+									<span class="mdc-button__label">Więcej</span>
+								</a>
 							</div>
 							<div class="mdc-layout-grid__cell--span-2-desktop
 										mdc-layout-grid__cell--span-8-tablet
@@ -128,9 +142,22 @@
 				</div>
 			</div>
 			<div id="footer">
-				<p class="description footer">
-					🛠 Strona w rozwoju 🛠
-				</p>
+				<div class="mdc-layout-grid">
+					<div class="mdc-layout-grid__inner">
+						<a href="privacy_policy" class="footer
+									mdc-layout-grid__cell--span-6-desktop
+									mdc-layout-grid__cell--span-4-tablet
+									mdc-layout-grid__cell--span-4-phone">
+							Polityka Prywatności
+						</a>
+						<a href="contact" class="footer
+									mdc-layout-grid__cell--span-6-desktop
+									mdc-layout-grid__cell--span-4-tablet
+									mdc-layout-grid__cell--span-4-phone">
+							Kontakt
+						</a>
+					</div>
+				</div>
 				<p class="description footer">
 					Google Play i logo Google Play są znakami towarowymi firmy Google LLC.
 				</p>
